@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     Rigidbody2D rb2d;
     [SerializeField] private int movementSpeed = 5;
-    [SerializeField] private float jumpForce = 400;
+    [SerializeField] private float jumpForce = 10;
     
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,11 @@ public class Movement : MonoBehaviour
         {
             rb2d.position += Vector2.left * movementSpeed * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
             rb2d.position += Vector2.right * movementSpeed * Time.deltaTime;
         }
-        else if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             rb2d.position += Vector2.up * jumpForce * Time.deltaTime;
         }
