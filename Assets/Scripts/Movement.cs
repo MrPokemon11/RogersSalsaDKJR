@@ -25,16 +25,26 @@ public class Movement : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.D))
         {
-            rb2d.position += Vector2.right * movementSpeed * Time.deltaTime;
+            moveRight();
         }
         if (Input.GetKeyDown(KeyCode.W))
         {
-            rb2d.position += Vector2.up * jumpForce * Time.deltaTime;
+            Jump();
         }
     }
 
     public void MoveLeft()
     {
         rb2d.position += Vector2.left * movementSpeed * Time.deltaTime;
+    }
+
+    public void moveRight()
+    {
+        rb2d.position += Vector2.right * movementSpeed * Time.deltaTime;
+    }
+
+    public void Jump()
+    {
+        rb2d.position += Vector2.up * jumpForce * Time.deltaTime;
     }
 }
