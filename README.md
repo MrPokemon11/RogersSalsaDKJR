@@ -6,7 +6,12 @@
  George Salsa: 50%
 
 
- The solution that is being implemented is a speed increase or upgrade when the player holds down a specific movement button. The game is in 2d, so the basic movement is “A” for moving left, “D” for moving right and “W” for jumping. The set movement speed for the player is 5. When the player holds down either the “A” or the “D” buttons, the speed gets increased to 10. The player will have to hold the movement button down for 2 seconds in order for the speed increase to take effect. A DLL is being implemented to handle the increase in movement when the player holds down either the “A” or “D” buttons. 
+ The solution that is being implemented is a speed increase or upgrade when the player holds down a specific movement button. The game is in 2d, so the basic movement is “A” for moving left, “D” for moving right and “W” for jumping. The initial movement speed for the player is 5. When "RogersSalsa.dll" is in the plugins folder, the speed gets increased to 15.
+ 
+ The reason that the assignment was submitted late was because we could not figure out how to create a dll within the time frame. The additional time was helpful because it allowed us to gain a better understanding of how DLLs work in preparation for the final exam.
 
  diagram:
 https://drive.google.com/file/d/1UZ1J4rYfgjQz8WpgbZ8EIX3KrEpxkz4f/view?usp=sharing
+
+ resources used:
+https://www.alanzucconi.com/2015/10/11/how-to-write-native-plugins-for-unity/
