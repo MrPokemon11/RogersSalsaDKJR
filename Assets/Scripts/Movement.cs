@@ -15,11 +15,13 @@ public class Movement : MonoBehaviour
     }
 
     // Update is called once per frame
+    
+    // Design pattern: command
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
         {
-            rb2d.position += Vector2.left * movementSpeed * Time.deltaTime;
+            MoveLeft();
         }
         if (Input.GetKey(KeyCode.D))
         {
@@ -30,5 +32,9 @@ public class Movement : MonoBehaviour
             rb2d.position += Vector2.up * jumpForce * Time.deltaTime;
         }
     }
-    
+
+    public void MoveLeft()
+    {
+        rb2d.position += Vector2.left * movementSpeed * Time.deltaTime;
+    }
 }
